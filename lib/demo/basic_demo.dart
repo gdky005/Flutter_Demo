@@ -9,20 +9,20 @@ class BasicDemo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
-            child: Icon(
-              Icons.pool,
-              size: 32.0,
-              color: Colors.white,
-            ),
+              child: Icon(
+                Icons.pool,
+                size: 32.0,
+                color: Colors.white,
+              ),
 //            color: Color.fromRGBO(3, 54, 255, 1.0),
-            padding: EdgeInsets.all(16.0),
-            margin: EdgeInsets.all(8.0),
-            height: 90.0,
-            width: 90.0,
-            decoration: BoxDecoration(
-              color: Color.fromRGBO(3, 54, 255, 1.0),
-            ),
-          )
+              padding: EdgeInsets.all(16.0),
+              margin: EdgeInsets.all(8.0),
+              height: 90.0,
+              width: 90.0,
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(3, 54, 255, 1.0),
+                border: Border.all(color: Colors.indigoAccent[100], width: 3.0),
+              ))
         ],
       ),
     );
