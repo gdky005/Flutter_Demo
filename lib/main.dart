@@ -24,10 +24,6 @@ class Home extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.grey[100],
           appBar: AppBar(
-            leading: IconButton(
-                icon: Icon(Icons.menu),
-                tooltip: "navigration",
-                onPressed: () => debugPrint("菜单")),
             actions: <Widget>[
               IconButton(
                   icon: Icon(Icons.search),
@@ -73,6 +69,7 @@ class Home extends StatelessWidget {
                     ),
                     trailing:
                         Icon(Icons.message, color: Colors.black12, size: 22.0),
+                    onTap: () => Navigator.pop(context),
                   ),
                   ListTile(
                     title: Text(
@@ -81,6 +78,7 @@ class Home extends StatelessWidget {
                     ),
                     trailing:
                         Icon(Icons.favorite, color: Colors.black12, size: 22.0),
+                    onTap: () => Navigator.pop(context),
                   ),
                   ListTile(
                     title: Text(
@@ -89,6 +87,7 @@ class Home extends StatelessWidget {
                     ),
                     trailing:
                         Icon(Icons.settings, color: Colors.black12, size: 22.0),
+                    onTap: () => Navigator.pop(context),
                   ),
                 ],
               ),
