@@ -58,9 +58,40 @@ class Home extends StatelessWidget {
           ),
           drawer: Container(
             color: Colors.white,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[Text('this is drawer')],
+            child: Drawer(
+              child: ListView(
+                padding: EdgeInsets.zero,
+                children: <Widget>[
+                  DrawerHeader(
+                    child: Text('header'.toUpperCase()),
+                    decoration: BoxDecoration(color: Colors.grey[100]),
+                  ),
+                  ListTile(
+                    title: Text(
+                      'Messages',
+                      textAlign: TextAlign.right,
+                    ),
+                    trailing:
+                        Icon(Icons.message, color: Colors.black12, size: 22.0),
+                  ),
+                  ListTile(
+                    title: Text(
+                      'Favorite',
+                      textAlign: TextAlign.right,
+                    ),
+                    trailing:
+                        Icon(Icons.favorite, color: Colors.black12, size: 22.0),
+                  ),
+                  ListTile(
+                    title: Text(
+                      'Settings',
+                      textAlign: TextAlign.right,
+                    ),
+                    trailing:
+                        Icon(Icons.settings, color: Colors.black12, size: 22.0),
+                  ),
+                ],
+              ),
             ),
           ),
         ));
