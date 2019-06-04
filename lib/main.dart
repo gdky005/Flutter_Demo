@@ -8,7 +8,10 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
-      theme: ThemeData(primarySwatch: Colors.yellow),
+      theme: ThemeData(
+          primarySwatch: Colors.yellow,
+          highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+          splashColor: Colors.white70),
     );
   }
 }
