@@ -3,7 +3,20 @@ import 'package:flutter/material.dart';
 class BasicDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return TextDemo();
+    return RichText(
+        text: TextSpan(
+            text: 'WangQing',
+            style: TextStyle(
+              color: Colors.deepOrangeAccent,
+              fontSize: 34.0,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w100,
+            ),
+            children: [
+          TextSpan(
+              text: '.zkteam.cc',
+              style: TextStyle(fontSize: 17.0, color: Colors.grey))
+        ]));
   }
 }
 
