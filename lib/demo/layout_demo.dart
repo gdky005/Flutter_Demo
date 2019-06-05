@@ -12,6 +12,7 @@ class LayoutDemo extends StatelessWidget {
             width: 200,
             height: 300,
             child: Container(
+              alignment: Alignment(0,0),
               decoration: BoxDecoration(
                 color: Color.fromRGBO(3, 54, 255, 1.0),
                 borderRadius: BorderRadius.circular(8.0),
