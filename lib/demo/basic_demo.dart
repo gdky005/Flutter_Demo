@@ -4,7 +4,17 @@ class BasicDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[100],
+//      color: Colors.grey[100],
+      decoration: BoxDecoration(
+        image: DecorationImage(
+            image: NetworkImage(
+                'http://e.hiphotos.baidu.com/image/h%3D300/sign=a9e671b9a551f3dedcb2bf64a4eff0ec/4610b912c8fcc3cef70d70409845d688d53f20f7.jpg'),
+            alignment: Alignment.topCenter,
+            // repeat: ImageRepeat.repeatY,
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(Colors.indigoAccent[100].withOpacity(0.5), BlendMode.hardLight)
+            ),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
