@@ -31,7 +31,13 @@ class BasicDemo extends StatelessWidget {
                     spreadRadius: 6.0,
                   ),
                 ],
-                shape: BoxShape.circle),
+                shape: BoxShape.circle,
+//                gradient: RadialGradient(
+//                    colors: [Colors.indigoAccent[100], Colors.red[100]]),
+                gradient: LinearGradient(
+                    colors: [Colors.indigoAccent[100], Colors.red[100]],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter)),
           )
         ],
       ),
