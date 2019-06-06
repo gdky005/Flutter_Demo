@@ -2,19 +2,48 @@ import 'package:flutter/material.dart';
 import '../model/post.dart';
 
 class ViewDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GridViewExtentDemo();
+  }
+}
 
- List<Widget> _buildTiles(int length) {
-   return List.generate(length, (int index) {
-     return Container(
-          color: Colors.grey[300],
-          alignment: Alignment(0, 0),
-          child: Text(
-            'Item $index',
-            style: TextStyle(fontSize: 18, color: Colors.grey)
-          ),
-        );
-   });
- }
+
+class GridViewExtentDemo extends StatelessWidget {
+  List<Widget> _buildTiles(int length) {
+    return List.generate(length, (int index) {
+      return Container(
+        color: Colors.grey[300],
+        alignment: Alignment(0, 0),
+        child: Text('Item $index',
+            style: TextStyle(fontSize: 18, color: Colors.grey)),
+      );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.extent(
+      maxCrossAxisExtent: 150,
+      crossAxisSpacing: 16,
+      mainAxisSpacing: 16,
+      // scrollDirection: Axis.horizontal,
+      children: _buildTiles(100), 
+    );
+  }
+}
+
+class GridViewCountDemo extends StatelessWidget {
+  List<Widget> _buildTiles(int length) {
+    return List.generate(length, (int index) {
+      return Container(
+        color: Colors.grey[300],
+        alignment: Alignment(0, 0),
+        child: Text('Item $index',
+            style: TextStyle(fontSize: 18, color: Colors.grey)),
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
