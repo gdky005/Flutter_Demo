@@ -9,15 +9,31 @@ class SliverDemo extends StatelessWidget {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            title: Text('WangQing', textAlign: TextAlign.center,),
+            // title: Text('WangQing', textAlign: TextAlign.center,),
             // pinned: true,
             floating: true,
-
+            expandedHeight: 178,
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text(
+                'WangQing Flutter'.toUpperCase(),
+                style: TextStyle(
+                  fontSize: 15,
+                  letterSpacing: 3,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white,
+                ),
+              ),
+              background: Image.network(
+                'http://c.hiphotos.baidu.com/image/h%3D300/sign=b04be57d04d162d99aee641c21dea950/b7003af33a87e950876958d51e385343fbf2b409.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           SliverSafeArea(
             sliver: SliverPadding(
               padding: EdgeInsets.all(8),
-              sliver: SliverListDemo(),
+              // sliver: SliverListDemo(),
+              sliver: SliverGrideDemo(),
             ),
           )
         ],
